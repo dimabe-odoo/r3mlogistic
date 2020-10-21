@@ -1,0 +1,6 @@
+pyjwt
+simplejson
+XlsxWriter
+xlrd
+python-dateutil
+pandas

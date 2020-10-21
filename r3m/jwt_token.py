@@ -17,6 +17,5 @@ def generate_token(user_id):
     )
     return token
 
-
 def decode_token(token):
     return jwt.decode(token, secret, algorithm=[algorithm])
