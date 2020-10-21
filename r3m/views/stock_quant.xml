@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_stock_quant_tree_editable_inherit" model="ir.ui.view">
+            <field name="name">r3m.stock.view_stock_quant_tree_editable.form</field>
+            <field name="model">stock.quant</field>
+            <field name="inherit_id" ref="stock.view_stock_quant_tree_editable"/>
+            <field name="priority" eval="50"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='quantity']" position="after">
+                    <field name="r3m_eta" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_partner_id" widget="many2onebutton" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_po" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_container" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_bl" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_booking" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_picking_date" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_roll_number" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_gramaje" groups="__export__.res_groups_57_58c727f4" />
+                    <field name="r3m_paper_type" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_format" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_rol_weight" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_linear_m" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_order" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_oc" groups="__export__.res_groups_57_58c727f4"/>
+                    <button type="object" string="Charge" name="charge_data" groups="base.group_no_one"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="view_stock_quant_tree_inherit" model="ir.ui.view">
+            <field name="name">r3m.stock.view_stock_quant_tree.form</field>
+            <field name="model">stock.quant</field>
+            <field name="inherit_id" ref="stock.view_stock_quant_tree"/>
+            <field name="priority" eval="50"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='quantity']" position="after">
+                    <field name="r3m_eta" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_partner_id" widget="many2onebutton" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_po" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_container" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_bl" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_booking" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_picking_date" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_roll_number" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_gramaje" groups="__export__.res_groups_57_58c727f4" />
+                    <field name="r3m_paper_type" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_format" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_rol_weight" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_linear_m" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_order" groups="__export__.res_groups_57_58c727f4"/>
+                    <field name="r3m_oc" groups="__export__.res_groups_57_58c727f4"/>
+                    <button type="object" string="Charge" name="charge_data" groups="base.group_no_one"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
