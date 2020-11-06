@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="delivery_slip_inherit" inherit_id="stock.report_delivery_document">
+            <xpath expr="//th[@name='lot_serial']" position="after">
+                <th>Peso:</th>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_line_table']//tbody//tr//td[3]" position="attributes">
+                <attribute name="name">lot</attribute>
+            </xpath>
+            <xpath expr="//td[@name='lot']" position="after">
+                <td>
+                    <span t-field="move_line.lot_id.kilos"/>
+                </td>
+            </xpath>
+            <xpath expr="//table[@name='stock_move_line_table']//tbody//tr" position="after">
+                <tr>
+                    <td rowspan="4">
+                        <strong>Total:</strong>
+                    </td>
+                    <td></td>
+                    <td>
+                        <span t-esc="sum(o.move_line_ids.mapped('lot_id').mapped('kilos'))"/>
+                    </td>
+                </tr>
+            </xpath>
+        </template>
+    </data>
+</odoo>

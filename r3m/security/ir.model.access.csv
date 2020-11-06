@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_r3m_port,r3m.r3m_port,model_r3m_port,,1,1,1,0
+access_r3m_brand_truck,r3m.r3m_brand_truck,model_r3m_brand_truck,,1,1,1,0
+access_r3m_truck,r3m.r3m_truck,model_r3m_truck,,1,1,1,0
+access_r3m_plant,r3m.r3m_plant,model_r3m_plant,,1,1,1,0
